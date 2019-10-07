@@ -11,6 +11,15 @@
   background-color: #4056A1;
 }
 
+.navbar {
+  display: flex;
+}
+
+.navbar-right {
+  display: flex;
+  margin-left:auto;
+}
+
 .navbar-brand {
   height: 120 px;
   padding: 1.5em;
@@ -19,4 +28,13 @@
 span {
   color: #FFFFFF;
   font-family: "Bungee";
+}
+
+a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 1em;
 }
