@@ -13,6 +13,7 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -24,9 +25,9 @@
   <body>
 
     <!-- Top nav bar (fixed) -->
-    <nav class = "navbar navbar-brand navbar-expand-md bg-dark">
-      <div class="navbar-nav">
-        <span title="Home">tweeter</span>
+    <nav class = "navbar navbar-expand-md bg-dark fixed-top">
+      <div class="navbar-nav navbar-brand">
+        <span>tweeter</span>
       </div>
       <!-- <a href="/"><strong>Write</strong> a new tweet</a> -->
       <div class="navbar-right ml-auto">
@@ -36,9 +37,19 @@
       </div>
     </nav>
 
-    <p>
-      Hello
-    </p>
+    <header>
+      <div class="header bg-header">
+        <div>
+          <div class="avatar">
+              <img class="resize" src="/images/profile-hex.png"> 
+          </div>
+          <div class="text-center">
+              <h2>Jenny <span class="notbold">Nguy</span></h2>
+          </div>
+        </div>
+      </div>
+    </header>
+    
 
     <!-- Page-specific (main) content here -->
     <main class="container">

@@ -13,6 +13,15 @@
 
 .navbar {
   display: flex;
+  height: 120 px;
+  padding: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.navbar-brand {
+  color: #FFFFFF;
+  font-family: "Bungee";
+  font-size: 30px;
 }
 
 .navbar-right {
@@ -20,15 +29,11 @@
   margin-left:auto;
 }
 
-.navbar-brand {
-  height: 120 px;
-  padding: 1.5em;
-}
-
-span {
+/* span {
   color: #FFFFFF;
   font-family: "Bungee";
-}
+  font-size: 30px;
+} */
 
 a {
   font-family: "Source Sans Pro", sans-serif;
