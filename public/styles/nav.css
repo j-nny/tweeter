@@ -4,14 +4,19 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 3000;
 }
 
 .bg-dark {
   background-color: #4056A1;
 }
 
+.navbar-brand {
+  height: 120 px;
+  padding: 1.5em;
+}
+
 span {
-  color: #545149;
+  color: #FFFFFF;
   font-family: "Bungee";
 }
