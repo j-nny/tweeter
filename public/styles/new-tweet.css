@@ -1,0 +1,9 @@
+.btn {
+  border: none;
+  background-color: #4056A1;
+  font-family: "Bungee";
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 7px;
+  display: inline-block;
+}
