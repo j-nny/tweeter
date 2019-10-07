@@ -1,0 +1,17 @@
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.bg-dark {
+  background-color: #4056A1;
+}
+
+span {
+  color: #545149;
+  font-family: "Bungee";
+}
