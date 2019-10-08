@@ -1,0 +1,43 @@
+.article {
+  margin-top:2em;
+  border: solid;
+  background-color: transparent;
+}
+
+header {
+  margin: 0.75em;
+  display: flex;
+  align-content : bottom;
+}
+
+.fullname {
+  margin-right: auto;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.userhandle {
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.av-resize {
+  width: 50px
+}
+
+.tweet {
+  margin: 0.75em 0.75em 0.75em 1.5em;
+  background-color: transparent;
+}
+
+footer {
+  margin: 1.5em;
+  border-top: solid;
+  margin-top: 0.25em;
+  padding-top: 0.5em;
+  font-size: small;
+}
+
+.created {
+  padding-left: 1em;
+}
