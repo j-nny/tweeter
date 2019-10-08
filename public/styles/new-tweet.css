@@ -23,12 +23,12 @@
 
 textarea {
   width: 100%;
-  height: 2em;
+  height: 1.75em;
   font-weight: bold;
   resize: none;
   background-color: transparent;
   outline: none;
   border: none;
   border-bottom: solid;
-  margin-bottom: 4px;
+  margin-bottom: 0.25em;
 }
