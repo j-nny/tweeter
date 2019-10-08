@@ -59,12 +59,12 @@
     <main class="container body">
       <section class="new-tweet">
         <form action="/tweets" method="POST">
-          <div>
-            <textarea id="tweetbox" name="text" placeholder="What are you humming about?"></textarea>
+          <div id="tweetbox">
+            <textarea id="textbox" onkeyup="this" name="text" placeholder="What are you humming about?"></textarea>
           </div>
           <div>
             <input class="btn" type="submit" value="Tweet">
-            <span class="counter">140</span>
+            <span id="counter" class="counter">140</span>
           </div>
         </form>
       </section>

@@ -1,7 +1,9 @@
 $(document).ready(function() {
-
-  $("#tweetbox").on('keydown', function() {
-    console.log(this); //The this keyword is a reference to the button
-  });
-
+  ``
+    // const length = val.value.length;
+    $("#tweetbox").keyup(function() {
+      console.log(document.querySelector('#textbox').value.length)
+      // console.log(document.querySelector('#counter'));
+      // console.log(textarea.length)
+    });
 });
