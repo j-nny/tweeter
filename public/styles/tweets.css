@@ -1,8 +1,16 @@
-.article {
+#article {
   margin-top: 2em;
   border: solid;
   background-color: transparent;
   font-size: 20px;
+}
+
+#article:hover {
+  box-shadow: 10px 10px #FFD700;
+}
+
+#article:hover .userhandle{
+  opacity: 1;
 }
 
 .article-header {
@@ -20,6 +28,8 @@
 .userhandle {
   margin-left: auto;
   margin-top: 10px;
+  color: #545149;
+  opacity: 0;
 }
 
 .av-resize {
