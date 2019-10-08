@@ -1,10 +1,11 @@
 .article {
-  margin-top:2em;
+  margin-top: 2em;
   border: solid;
   background-color: transparent;
+  font-size: 20px;
 }
 
-header {
+.article-header {
   margin: 0.75em;
   display: flex;
   align-content : bottom;
@@ -31,13 +32,24 @@ header {
 }
 
 footer {
+  display: flex;
   margin: 1.5em;
   border-top: solid;
   margin-top: 0.25em;
   padding-top: 0.5em;
-  font-size: small;
+  font-size: 12px;
 }
 
 .created {
   padding-left: 1em;
+}
+
+.icons {
+  display: flex;
+  margin-left: auto;
+}
+
+.icon-resize {
+  width: 15px;
+  margin-left: 5px;
 }
