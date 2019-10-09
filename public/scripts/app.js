@@ -80,6 +80,12 @@ $(document).ready(function() {
     }
   }
 
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   // function appends the new tweet to the tweets-container on the page
   let createTweetElement = function(tweetData) {
     let $tweet = `<article id="article">
@@ -93,7 +99,7 @@ $(document).ready(function() {
       </div>
     </header>
     <div class="tweet">
-      <span>${tweetData.content.text}</span>
+      <span>${escape(tweetData.content.text)}</span>
     </div>
     <footer id="tweet-footer">
       <span class="created">${howLongAgo(tweetData.created_at)}</span>
