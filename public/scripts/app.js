@@ -64,9 +64,9 @@ $(document).ready(function() {
 
     const countTime = 24 * 60 * 60 * 1000; // days ago
     const daysAgo = Math.abs((dateCreated - today) / countTime)
-    if (daysAgo < 1 / (24 * 60)) {
+    if (daysAgo < 1 / 24) {
       return `${Math.round(Math.abs((dateCreated - today) / (60 * 1000)))} minutes ago`
-    } else if (daysAgo < 1 / 24) {
+    } else if (daysAgo < 24) {
       return `${Math.round(Math.abs((dateCreated - today) / (60 * 60 * 1000)))} hours ago`
     } else if (daysAgo * 365 >= 365) {
       return `${Math.round(Math.abs((dateCreated - today) / (365 * 24 * 60 * 60 * 1000)))} years ago`
