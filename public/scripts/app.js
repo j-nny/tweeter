@@ -4,18 +4,19 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-//  counts remaining characters available in new tweet and changes colour to red when exceeded
 $(document).ready(function() {
+  
+  //  counts remaining characters available in new tweet and changes colour to red when exceeded
   $("#tweetbox").keyup(function() {
-    messageLength = document.querySelector("#textbox").value.length;
-    document.querySelector('#counter').innerHTML=140-messageLength;
-
-    if (document.querySelector('#counter').innerHTML < 0) {
-      document.getElementById("counter").style.color='red'
+    messageLength = $("#textbox").val().length;
+    $("#counter").html(140-messageLength);
+    if ($("#counter").html() < 0) {
+      $("#counter").addClass("textred")
     } else {
-      document.getElementById("counter").style.color="#545149"
+      $("#counter").removeClass("textred")
     };
   });
+
 
   const data = [
     {
