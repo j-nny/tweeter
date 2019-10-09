@@ -16,14 +16,32 @@ $(document).ready(function() {
       $("#counter").removeClass("textred")
     };
   });
+  
+  const isMessageValid = function() {
+    let tweetValue = $('#textbox').val();
+    if (tweetValue === null) {
+      alert('Tweet cannot be null');
+      return false
+    } else if (tweetValue.length === 0) {
+      alert('If a tweet tweets but no one hears it, did the tweet really tweet? (Please enter a message)');
+      return false
+    } else if (tweetValue.length > 140) {
+      alert('You need to calm down');
+      return false
+    } else {
+      return true
+    }
+  }
 
   // submits data from form to /tweets
   $("#tweetForm").submit(function (e) {
     e.preventDefault()
-    $.ajax('/tweets', {
-      type: 'POST',
-      data: $(this).serialize()
-    })
+    if (isMessageValid()) {
+      $.ajax('/tweets', {
+        type: 'POST',
+        data: $(this).serialize()
+      })
+    }
   })
 
   let renderTweets = function(tweets) {
