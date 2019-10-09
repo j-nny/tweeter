@@ -17,14 +17,14 @@ $(document).ready(function() {
     };
   });
 
-  $("#inputTweet").submit(function (e) {
+  // submits data from form to /tweets
+  $("#tweetForm").submit(function (e) {
     e.preventDefault()
     $.ajax('/tweets', {
       type: 'POST',
       data: $(this).serialize()
     })
   })
-
 
   const data = [
     {
@@ -57,6 +57,7 @@ $(document).ready(function() {
     } 
   }
 
+  //function takes unix code and returns how long ago it was in minutes/hours/days/approximate months/years
   const howLongAgo = function(unix) {
     const dateCreated = new Date(unix);
     const today = new Date();
@@ -69,11 +70,14 @@ $(document).ready(function() {
       return `${Math.round(Math.abs((dateCreated - today) / (60 * 60 * 1000)))} hours ago`
     } else if (daysAgo * 365 >= 365) {
       return `${Math.round(Math.abs((dateCreated - today) / (365 * 24 * 60 * 60 * 1000)))} years ago`
+    } else if (daysAgo * 365 / 12 >= 365 / 12) {
+      return `${Math.round(Math.abs((dateCreated - today) / (365 / 12 * 24 * 60 * 60 * 1000)))} months ago` // only approximates months
     } else {
       return `${Math.round(daysAgo)} days ago`;
     }
   }
 
+  // function appends the new tweet to the tweets-container on the page
   let createTweetElement = function(tweetData) {
     let $tweet = `<article id="article">
     <header class="article-header">
@@ -100,7 +104,16 @@ $(document).ready(function() {
   $("#tweets-container").append($tweet)
   };
 
-  renderTweets(data);
+  // renderTweets(data);
+
+  //function fetches data (array of tweets as JSON) from /tweets
+  const loadTweets = function() {
+    $.getJSON('/tweets', function(data) {
+      renderTweets(data);
+    })
+  }
+
+  loadTweets();
 
 // close $(document).ready(function()
 });
