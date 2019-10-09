@@ -17,6 +17,14 @@ $(document).ready(function() {
     };
   });
 
+  $("#inputTweet").submit(function (e) {
+    e.preventDefault()
+    $.ajax('/tweets', {
+      type: 'POST',
+      data: $(this).serialize()
+    })
+  })
+
 
   const data = [
     {
@@ -94,5 +102,5 @@ $(document).ready(function() {
 
   renderTweets(data);
 
-
+// close $(document).ready(function()
 });

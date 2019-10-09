@@ -20,15 +20,11 @@
 }
 
 .fullname {
-  margin-right: auto;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin: 10px auto 0px 10px;
 }
 
 .userhandle {
-  margin-left: auto;
-  margin-top: 10px;
-  color: #545149;
+  margin: 10px 0px 0px auto;
   opacity: 0;
 }
 
@@ -41,11 +37,10 @@
   background-color: transparent;
 }
 
-footer {
+#tweet-footer {
   display: flex;
-  margin: 1.5em;
+  margin: 0.25em 1.5em 1.5em 1.5em;
   border-top: solid;
-  margin-top: 0.25em;
   padding-top: 0.5em;
   font-size: 12px;
 }

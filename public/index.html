@@ -24,7 +24,21 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <!-- <script>
+      const postNewTweet = async () => {
+        event.preventDefault() 
+        try {
+          const response = await $.ajax({
+            url: $('#postTweet').serialize(),
+            type: 'POST'
+          })
+          renderTweets(response)
+        } catch (error) {
+          console.log(error)
+        }
+    }</script> -->
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   </head>
 
   
@@ -35,8 +49,8 @@
     </div>
     <!-- <a href="/"><strong>Write</strong> a new tweet</a> -->
     <div class="navbar-right ml-auto">
-      <div class = "navbar-nav" >
-        <a href="/"><strong>Write</strong> a new tweet</a>
+      <div class="navbar-nav" >
+        <a class="navbar-bar" href="/"><strong>Write</strong> a new tweet</a>
       </div>
     </div>
   </nav>
@@ -48,7 +62,7 @@
           <img class="resize" src="/images/profile-hex.png"> 
         </div>
         <div class="text-center">
-          <h2>Jenny <span class="notbold">Nguy</span></h2>
+          <h2 class="name-h2">Jenny <span class="notbold">Nguy</span></h2>
         </div>
       </div>
     </div>
@@ -59,39 +73,43 @@
     <!-- Page-specific (main) content here -->
     <main class="container body">
       <section class="new-tweet">
-        <form action="/tweets" method="POST">
+        <form id="inputTweet" action="/tweets" method="POST">
           <div id="tweetbox">
-            <textarea id="textbox" name="text" placeholder="What are you humming about?"></textarea>
+            <textarea class="tweet-textarea" id="textbox" name="text" placeholder="What are you humming about?"></textarea>
           </div>
           <div>
-            <input class="btn" type="submit" value="Tweet">
+            <!-- <input class="btn" type="submit" value="Tweet"> -->
+            <button id="postTweet" class="btn" type="submit">Tweet</button>
             <span id="counter" class="counter">140</span>
           </div>
         </form>
       </section>
-      <section id="article">
-        <header class="article-header">
-          <div>
-            <img class="av-resize" src="https://i.imgur.com/nlhLi3I.png">
-          </div>
-            <span class="fullname">Elmer Lazzeri</span>
-          <div class="userhandle">
-            <span>@Lazzeri</span>
-          </div>
-        </header>
-        <div class="tweet">
-          <span>Hello?</span>
-        </div>
-        <footer>
-          <span class="created">10 days ago</span>
-          <div class="icons">
-            <img class="icon-resize" src="/images/flag.png"> 
-            <img class="icon-resize" src="/images/like.png"> 
-            <img class="icon-resize" src="/images/retweet.png"> 
-          </div>
-        </footer>
-      </section>
-    </main>
 
+      <section id="tweets-container">
+        <article id="article">
+          <header class="article-header">
+            <div>
+              <img class="av-resize" src="https://i.imgur.com/nlhLi3I.png">
+            </div>
+              <span class="fullname">Elmer Lazzeri</span>
+            <div class="userhandle">
+              <span>@Lazzeri</span>
+            </div>
+          </header>
+          <div class="tweet">
+            <span>Hello?</span>
+          </div>
+          <footer id="tweet-footer">
+            <span class="created">10 days ago</span>
+            <div class="icons">
+              <img class="icon-resize" src="/images/flag.png"> 
+              <img class="icon-resize" src="/images/like.png"> 
+              <img class="icon-resize" src="/images/retweet.png"> 
+            </div>
+          </footer>
+        </article>
+      </section>
+
+    </main>
   </body>
 </html>

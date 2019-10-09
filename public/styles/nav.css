@@ -16,6 +16,7 @@
   height: 120 px;
   padding: 1.5em;
   padding-bottom: 0.5em;
+  color: #FFFFFF;
 }
 
 .navbar-brand {
@@ -26,10 +27,10 @@
 
 .navbar-right {
   display: flex;
-  margin-left:auto;
+  margin-left: auto;
 }
 
-a {
+.navbar-bar {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
   color: #FFFFFF;
