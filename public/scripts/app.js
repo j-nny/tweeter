@@ -17,6 +17,7 @@ $(document).ready(function() {
     };
   });
   
+  // function checks validity (not null, 0 <= chars <= 140)
   const isMessageValid = function() {
     let tweetValue = $('#textbox').val();
     if (tweetValue === null) {
@@ -26,7 +27,7 @@ $(document).ready(function() {
       alert('If a tweet tweets but no one hears it, did the tweet really tweet? (Please enter a message)');
       return false
     } else if (tweetValue.length > 140) {
-      alert('You need to calm down');
+      alert('You need to calm down! You\'re being too loud.');
       return false
     } else {
       return true
@@ -34,20 +35,29 @@ $(document).ready(function() {
   }
 
   // submits data from form to /tweets
-  $("#tweetForm").submit(function (e) {
-    e.preventDefault()
-    if (isMessageValid()) {
-      $.ajax('/tweets', {
-        type: 'POST',
-        data: $(this).serialize()
-      })
-    }
-  })
+  try{
+    $("#tweetForm").submit(function (e) {
+      e.preventDefault()
+      if (isMessageValid()) {
+        $.ajax('/tweets', {
+          type: 'POST',
+          data: $(this).serialize()
+        })
+        .success(function(data) {
+          $('#tweets-container').empty();
+          loadTweets();
+          $('#textbox').val('')
+        })
+      }
+    })
+  } catch (error) {
+    console.log(error);
+  }
 
   let renderTweets = function(tweets) {
     for (let tweet of tweets) {
       createTweetElement(tweet);
-    } 
+    }
   }
 
   //function takes unix code and returns how long ago it was in minutes/hours/days/approximate months/years
@@ -94,7 +104,7 @@ $(document).ready(function() {
       </div>
     </footer>
   </article>`
-  $("#tweets-container").append($tweet)
+  $("#tweets-container").prepend($tweet)
   };
 
   // renderTweets(data);
