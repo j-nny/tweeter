@@ -17,17 +17,6 @@ $(document).ready(function() {
     };
   });
 
-// const data= {
-//   "user": {
-//     "name": "Descartes",
-//     "avatars": "https://i.imgur.com/nlhLi3I.png",
-//     "handle": "@rd" },
-//   "content": {
-//     "text": "Je pense , donc je suis"
-//   },
-//   "created_at": 1461113959088
-// }
-
   const data = [
     {
       "user": {
@@ -59,6 +48,23 @@ $(document).ready(function() {
     } 
   }
 
+  const howLongAgo = function(unix) {
+    const dateCreated = new Date(unix);
+    const today = new Date();
+
+    const countTime = 24 * 60 * 60 * 1000; // days ago
+    const daysAgo = Math.abs((dateCreated - today) / countTime)
+    if (daysAgo < 1 / (24 * 60)) {
+      return `${Math.round(Math.abs((dateCreated - today) / (60 * 1000)))} minutes ago`
+    } else if (daysAgo < 1 / 24) {
+      return `${Math.round(Math.abs((dateCreated - today) / (60 * 60 * 1000)))} hours ago`
+    } else if (daysAgo * 365 >= 365) {
+      return `${Math.round(Math.abs((dateCreated - today) / (365 * 24 * 60 * 60 * 1000)))} years ago`
+    } else {
+      return `${Math.round(daysAgo)} days ago`;
+    }
+  }
+
   let createTweetElement = function(tweetData) {
     let $tweet = `<article id="article">
     <header class="article-header">
@@ -74,7 +80,7 @@ $(document).ready(function() {
       <span>${tweetData.content.text}</span>
     </div>
     <footer id="tweet-footer">
-      <span class="created">${tweetData.content.created_at}</span>
+      <span class="created">${howLongAgo(tweetData.created_at)}</span>
       <div class="icons">
         <img class="icon-resize" src="/images/flag.png"> 
         <img class="icon-resize" src="/images/like.png"> 
@@ -85,7 +91,6 @@ $(document).ready(function() {
   $("#tweets-container").append($tweet)
   };
 
-  // console.log(createTweetElement(data));
   renderTweets(data);
 
 
