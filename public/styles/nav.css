@@ -39,6 +39,11 @@
   padding: 1em;
 }
 
-.toggler {
-  display: none;
+.nav-tweet {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding-top: 6px;
 }
