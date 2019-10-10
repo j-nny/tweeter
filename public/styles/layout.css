@@ -35,14 +35,14 @@ main.body {
 @media only screen and (min-width: 1024px) {
   main.body {
     margin: 0 2.5% 2.5% 2.5%;
-    margin-top: 120px;
+    margin-top: 130px;
     width: 60%;
     float: right;
   }
 
   .header {
     width: 30%;
-    margin: 130px  2.5% 2.5% 2.5%;
+    margin: 130px 2.5% 2.5% 2.5%;
     float: left;
     padding-top: 30px;
     height: 100%;

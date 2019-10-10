@@ -30,7 +30,7 @@
   outline: none;
   border: none;
   border-bottom: solid;
-  margin-bottom: 0.25em;
+  margin: 0.25em 0 0.25em 0;
 }
 
 .textred {
@@ -49,4 +49,5 @@
 
 #tweetForm {
   display: none;
+  margin-bottom: 2em;
 }

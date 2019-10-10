@@ -1,5 +1,5 @@
 #article {
-  margin-top: 2em;
+  margin-bottom: 2em;
   border: solid;
   background-color: transparent;
   font-size: 20px;
@@ -33,7 +33,7 @@
 }
 
 .tweet {
-  margin: 0.75em 0.75em 0.75em 1.5em;
+  margin: 0em 0.75em 1.5em 1.5em;
   background-color: transparent;
 }
 
