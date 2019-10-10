@@ -16,6 +16,10 @@ $(document).ready(function() {
       $("#counter").removeClass("textred")
     };
   });
+
+  $("#writeNew").click(function() {
+    $("#tweetForm").toggle()
+  })
   
   // function checks validity (not null, 0 <= chars <= 140)
   const isMessageValid = function() {
