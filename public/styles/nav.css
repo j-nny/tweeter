@@ -36,7 +36,6 @@
   color: #FFFFFF;
   background-color: transparent;
   text-decoration: none;
-  padding: 1em;
 }
 
 .nav-tweet {
@@ -46,4 +45,15 @@
   font-size: 20px;
   color: #FFFFFF;
   padding-top: 6px;
+  cursor: pointer;
+  position: absolute;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%       { bottom:17px; }
+  50%      { bottom:22px; }
+  100%     { bottom:17px; }
 }

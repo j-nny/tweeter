@@ -1,6 +1,7 @@
 .btn {
   border: none;
   background-color: #4056A1;
+  cursor: pointer;
   font-family: "Bungee";
   font-size: 20px;
   color: #FFFFFF;
