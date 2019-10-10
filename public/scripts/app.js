@@ -42,6 +42,7 @@ $(document).ready(function() {
           $('#tweets-container').empty();
           loadTweets();
           $('#textbox').val('')
+          $('#counter').html('140')
         })
       }
     })
