@@ -5,17 +5,6 @@
  */
 
 $(document).ready(function() {
-  
-  //  counts remaining characters available in new tweet and changes colour to red when exceeded
-  $("#tweetbox").keyup(function() {
-    messageLength = $("#textbox").val().length;
-    $("#counter").html(140-messageLength);
-    if ($("#counter").html() < 0) {
-      $("#counter").addClass("textred")
-    } else {
-      $("#counter").removeClass("textred")
-    };
-  });
 
   $("#writeNew").click(function() {
     $("#tweetForm").toggle()
@@ -25,23 +14,17 @@ $(document).ready(function() {
   // function checks validity (not null, 0 <= chars <= 140)
   const isMessageValid = function() {
     let tweetValue = $('#textbox').val();
-    if (tweetValue === null) {
-      $("#alert-null").removeClass("hide-alert").addClass("display-alert")
-      setTimeout(function() {
-        $("#alert-0").removeClass("display-alert").addClass("hide-alert")
-      }, 60000)
-      return false
-    } else if (tweetValue.length === 0) {
+    if (tweetValue.length === 0 || tweetValue === null) {
       $("#alert-0").removeClass("hide-alert").addClass("display-alert")
       setTimeout(function() {
         $("#alert-0").removeClass("display-alert").addClass("hide-alert")
-      }, 60000)
+      }, 20000)
       return false
     } else if (tweetValue.length > 140) {
       $("#alert-over140").removeClass("hide-alert").addClass("display-alert")
       setTimeout(function() {
         $("#alert-0").removeClass("display-alert").addClass("hide-alert")
-      }, 60000)
+      }, 20000)
       return false
     } else {
       return true
