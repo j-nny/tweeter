@@ -15,16 +15,14 @@ $(document).ready(function() {
   const isMessageValid = function() {
     let tweetValue = $('#textbox').val();
     if (tweetValue.length === 0 || tweetValue === null) {
-      $("#alert-0").removeClass("hide-alert").addClass("display-alert")
-      setTimeout(function() {
-        $("#alert-0").removeClass("display-alert").addClass("hide-alert")
-      }, 20000)
+      $("#alert-0").slideUp('fast');
+      $("#alert-over140").slideUp('fast')
+      $("#alert-0").slideDown();
       return false
     } else if (tweetValue.length > 140) {
-      $("#alert-over140").removeClass("hide-alert").addClass("display-alert")
-      setTimeout(function() {
-        $("#alert-0").removeClass("display-alert").addClass("hide-alert")
-      }, 20000)
+      $("#alert-0").slideUp('fast');
+      $("#alert-over140").slideUp('fast')
+      $("#alert-over140").slideDown();
       return false
     } else {
       return true
