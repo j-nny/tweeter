@@ -63,6 +63,11 @@
     <main class="container body">
       <section class="new-tweet">
         <form id="tweetForm" action="/tweets" method="POST">
+          <div id="alert">
+            <div id="alert-null" class="alert hide-alert">Tweet cannot be null</div>
+            <div id="alert-0" class="alert hide-alert">If a tweet tweets but no one hears it, did the tweet really tweet? </br>(Please enter a message)</div>
+            <div id="alert-over140" class="alert hide-alert">You need to calm down! Too many characters</div>
+          </div>
           <div id="tweetbox">
             <textarea class="tweet-textarea" id="textbox" name="text" placeholder="What are you humming about?"></textarea>
           </div>

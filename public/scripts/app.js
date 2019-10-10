@@ -26,13 +26,22 @@ $(document).ready(function() {
   const isMessageValid = function() {
     let tweetValue = $('#textbox').val();
     if (tweetValue === null) {
-      alert('Tweet cannot be null');
+      $("#alert-null").removeClass("hide-alert").addClass("display-alert")
+      setTimeout(function() {
+        $("#alert-0").removeClass("display-alert").addClass("hide-alert")
+      }, 60000)
       return false
     } else if (tweetValue.length === 0) {
-      alert('If a tweet tweets but no one hears it, did the tweet really tweet? (Please enter a message)');
+      $("#alert-0").removeClass("hide-alert").addClass("display-alert")
+      setTimeout(function() {
+        $("#alert-0").removeClass("display-alert").addClass("hide-alert")
+      }, 60000)
       return false
     } else if (tweetValue.length > 140) {
-      alert('You need to calm down! You\'re being too loud.');
+      $("#alert-over140").removeClass("hide-alert").addClass("display-alert")
+      setTimeout(function() {
+        $("#alert-0").removeClass("display-alert").addClass("hide-alert")
+      }, 60000)
       return false
     } else {
       return true
