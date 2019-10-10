@@ -58,3 +58,11 @@
   50%      { bottom:22px; }
   100%     { bottom:17px; }
 }
+
+#return-to-top {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 3000;
+  display: none;
+}

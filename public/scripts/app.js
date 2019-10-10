@@ -11,7 +11,19 @@ $(document).ready(function() {
     $("#textbox").focus();
     window.scrollTo(0, 0);
   })
-  
+
+  if ($(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {
+      $("#return-to-top").fadeIn(200);
+    } else {
+      $("#return-to-top").fadeOut(200);
+    }
+  })
+  )
+  $("#return-to-top").click(function() {
+    window.scrollTo(0, 0);
+  })
+
   // function checks validity (not null, 0 <= chars <= 140)
   const isMessageValid = function() {
     let tweetValue = $('#textbox').val();
