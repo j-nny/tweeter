@@ -34,7 +34,7 @@ main.body {
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   main.body {
-    margin: 5%;
+    margin: 0 2.5% 2.5% 2.5%;
     margin-top: 120px;
     width: 60%;
     float: right;
@@ -42,8 +42,9 @@ main.body {
 
   .header {
     width: 30%;
+    margin: 130px  2.5% 2.5% 2.5%;
     float: left;
-    padding-top: 105.6px;
-    height: 400px;
+    padding-top: 30px;
+    height: 100%;
   }
 }
