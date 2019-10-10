@@ -46,3 +46,7 @@
   text-align: center;
   display: none;
 }
+
+#tweetForm {
+  display: none;
+}
