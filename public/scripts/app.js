@@ -8,20 +8,26 @@ $(document).ready(function() {
 
   $("#writeNew").click(function() {
     $("#tweetForm").toggle()
-    $("#textbox").focus()
+    $("#textbox").focus();
+    window.scrollTo(0, 0);
   })
+
+  //function scrolls to top of page
+  let scrollToTop = function() {
+    window.scrollTo(0, 0);
+  }
   
   // function checks validity (not null, 0 <= chars <= 140)
   const isMessageValid = function() {
     let tweetValue = $('#textbox').val();
     if (tweetValue.length === 0 || tweetValue === null) {
-      $("#alert-0").slideUp('fast');
-      $("#alert-over140").slideUp('fast')
+      // $("#alert-0").slideUp('fast');
+      // $("#alert-over140").slideUp('fast')
       $("#alert-0").slideDown();
       return false
     } else if (tweetValue.length > 140) {
-      $("#alert-0").slideUp('fast');
-      $("#alert-over140").slideUp('fast')
+      // $("#alert-0").slideUp('fast');
+      // $("#alert-over140").slideUp('fast')
       $("#alert-over140").slideDown();
       return false
     } else {
@@ -76,6 +82,7 @@ $(document).ready(function() {
     }
   }
 
+  // all tweet inputs will display as text
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
