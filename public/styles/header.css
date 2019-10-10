@@ -3,12 +3,6 @@
   justify-content: center;
 }
 
-.header {
-  padding-top: 105.6px;
-  height: 400px;
-  width: 100%;
-}
-
 .bg-header {
   background-color: #CCCCCC;
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");

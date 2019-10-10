@@ -40,9 +40,9 @@
 .alert {
   background-color: transparent;
   width: 100%;
-  border: 3px solid red;
-  padding: 5px;
-  margin: 5px 5px 30px 5px;
+  border: 0.2em solid red;
+  padding: 0.6em;
+  margin: 0.6em 0.6em 2.5em 0.6em;
   text-align: center;
   display: none;
 }

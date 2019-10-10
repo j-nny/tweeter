@@ -6,7 +6,7 @@
 }
 
 #article:hover {
-  box-shadow: 10px 10px #FFD700;
+  box-shadow: 0.6em 0.6em #FFD700;
 }
 
 #article:hover .userhandle{
@@ -20,11 +20,11 @@
 }
 
 .fullname {
-  margin: 10px auto 0px 10px;
+  margin: 0.6em auto 0 0.6em;
 }
 
 .userhandle {
-  margin: 10px 0px 0px auto;
+  margin: 0.6em 0 0 auto;
   opacity: 0;
 }
 
@@ -57,5 +57,5 @@
 
 .icon-resize {
   width: 15px;
-  margin-left: 5px;
+  margin-left: 0.35em;
 }

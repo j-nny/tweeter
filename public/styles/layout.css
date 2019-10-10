@@ -21,10 +21,29 @@ body {
   color: #545149;
 }
 
+.header {
+  padding-top: 105.6px;
+  height: 400px;
+  width: 100%;
+}
+
 main.body {
   margin: 5%;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  main.body {
+    margin: 5%;
+    margin-top: 120px;
+    width: 60%;
+    float: right;
+  }
+
+  .header {
+    width: 30%;
+    float: left;
+    padding-top: 105.6px;
+    height: 400px;
+  }
+}
