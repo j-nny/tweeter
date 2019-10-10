@@ -19,6 +19,7 @@ $(document).ready(function() {
 
   $("#writeNew").click(function() {
     $("#tweetForm").toggle()
+    $("#textbox").focus()
   })
   
   // function checks validity (not null, 0 <= chars <= 140)
