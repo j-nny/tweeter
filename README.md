@@ -6,8 +6,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Screenshot of tablet view"](https://github.com/j-nny/tinyapp/blob/master/docsTinyApp-newURLPage.png)
-!["Screenshot of desktop view"](https://github.com/j-nny/tinyapp/blob/master/docs/TinyApp-URLsPage.png)
+!["Screenshot of desktop view"](https://github.com/j-nny/tweeter/blob/master/docs/Desktop-view.png)
+!["Screenshot of tablet view"](https://github.com/j-nny/tweeter/blob/master/docs/Tablet-view.png)
 
 ## Dependencies
 
