@@ -76,11 +76,11 @@ $(document).ready(function() {
     const daysAgo = Math.abs((dateCreated - today) / countTime)
     if (daysAgo < 1 / 24) {
       return `${Math.round(Math.abs((dateCreated - today) / (60 * 1000)))} minutes ago`
-    } else if (daysAgo < 24) {
+    } else if (daysAgo < 1) {
       return `${Math.round(Math.abs((dateCreated - today) / (60 * 60 * 1000)))} hours ago`
-    } else if (daysAgo * 365 >= 365) {
+    } else if (daysAgo >= 365) {
       return `${Math.round(Math.abs((dateCreated - today) / (365 * 24 * 60 * 60 * 1000)))} years ago`
-    } else if (daysAgo * 365 / 12 >= 365 / 12) {
+    } else if (daysAgo >= 365 / 12) {
       return `${Math.round(Math.abs((dateCreated - today) / (365 / 12 * 24 * 60 * 60 * 1000)))} months ago` // only approximates months
     } else {
       return `${Math.round(daysAgo)} days ago`;
