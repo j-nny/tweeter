@@ -22,9 +22,20 @@ $(document).ready(function() {
     }
   })
   )
+
   $("#return-to-top").click(function() {
     window.scrollTo(0, 0);
   })
+
+  // changes the height of the textbox as lines of text are added/removed
+  $("#textbox").keyup(function() {
+    while($(this).outerHeight() < this.scrollHeight + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth"))) {
+        $(this).height($(this).height()+1);
+    };
+    while($(this).outerHeight() + parseFloat($(this).css("borderTopWidth")) + parseFloat($(this).css("borderBottomWidth")) > (this.scrollHeight + 5)) {
+      $(this).height($(this).height()-1);
+  };
+  });
 
   // function checks validity (not null, 0 <= chars <= 140)
   const isMessageValid = function() {
