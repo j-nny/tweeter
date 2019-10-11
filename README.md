@@ -6,7 +6,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
+Desktop view:
 !["Screenshot of desktop view"](https://github.com/j-nny/tweeter/blob/master/docs/Desktop-view.png)
+Tablet view:
 !["Screenshot of tablet view"](https://github.com/j-nny/tweeter/blob/master/docs/Tablet-view.png)
 
 ## Dependencies
