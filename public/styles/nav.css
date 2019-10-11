@@ -66,3 +66,18 @@
   z-index: 3000;
   display: none;
 }
+
+.down {
+  display: 1;
+}
+
+.return-icon {
+  width: 2.5em;
+}
+
+.return-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}

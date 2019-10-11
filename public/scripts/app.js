@@ -6,7 +6,7 @@
 
 $(document).ready(function() {
 
-  $("#writeNew").click(function() {
+  $(".writeNew").click(function() {
     $("#tweetForm").slideToggle()
     $("#textbox").focus();
     window.scrollTo(0, 0);
@@ -15,8 +15,10 @@ $(document).ready(function() {
   if ($(window).scroll(function() {
     if ($(this).scrollTop() >= 50) {
       $("#return-to-top").fadeIn(200);
+      $(".down").fadeOut(200);
     } else {
       $("#return-to-top").fadeOut(200);
+      $(".down").fadeIn(200);
     }
   })
   )
